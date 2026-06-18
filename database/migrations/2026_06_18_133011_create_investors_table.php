@@ -12,6 +12,7 @@ return new class extends Migration
             $table->unsignedBigInteger('investor_id')->primary();
             $table->string('name');
             $table->unsignedTinyInteger('age');
+            $table->timestamps();
         });
     }
 

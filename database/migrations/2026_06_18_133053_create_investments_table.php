@@ -13,6 +13,7 @@ return new class extends Migration
             $table->unsignedBigInteger('investor_id');
             $table->decimal('investment_amount', 15);
             $table->date('investment_date');
+            $table->timestamps();
 
             $table->foreign('investor_id')
                 ->references('investor_id')
