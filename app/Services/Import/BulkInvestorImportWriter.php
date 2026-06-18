@@ -23,16 +23,27 @@ final class BulkInvestorImportWriter implements InvestorImportWriter
         return DB::transaction(function () use ($rows, $chunkSize): int {
             $investors = [];
             $investments = [];
+            $seenInvestments = [];
             $rowCount = 0;
 
-            foreach ($rows as $row) {
+            foreach ($rows as $lineNumber => $row) {
                 $investmentDate = $row->investmentDate->format('Y-m-d');
+                $investmentKey = $row->investorId.'|'.$investmentDate;
+
+                if (isset($seenInvestments[$investmentKey])) {
+                    throw InvestorImportValidationException::forRow(
+                        $lineNumber,
+                        "Duplicate investment for investor $row->investorId on $investmentDate; first declared on row $seenInvestments[$investmentKey].",
+                    );
+                }
+
+                $seenInvestments[$investmentKey] = $lineNumber;
                 $investors[$row->investorId] = [
                     'investor_id' => $row->investorId,
                     'name' => $row->name,
                     'age' => $row->age,
                 ];
-                $investments[$row->investorId.'|'.$investmentDate] = [
+                $investments[$investmentKey] = [
                     'investor_id' => $row->investorId,
                     'investment_amount' => $row->investmentAmount,
                     'investment_date' => $investmentDate,
