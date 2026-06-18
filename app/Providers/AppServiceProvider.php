@@ -6,9 +6,11 @@ namespace App\Providers;
 
 use App\Contracts\InvestorImportReader;
 use App\Contracts\InvestorImportWriter;
+use App\Contracts\InvestorStatistics;
 use App\Services\Import\BulkInvestorImportWriter;
 use App\Services\Import\CsvInvestorImportReader;
 use App\Services\Import\InvestorImportService;
+use App\Services\InvestorStatisticsService;
 use Illuminate\Contracts\Foundation\Application;
 use Illuminate\Support\ServiceProvider;
 
@@ -18,6 +20,7 @@ class AppServiceProvider extends ServiceProvider
     {
         $this->app->bind(InvestorImportReader::class, CsvInvestorImportReader::class);
         $this->app->bind(InvestorImportWriter::class, BulkInvestorImportWriter::class);
+        $this->app->bind(InvestorStatistics::class, InvestorStatisticsService::class);
         $this->app->bind(
             InvestorImportService::class,
             fn (Application $app): InvestorImportService => new InvestorImportService(
