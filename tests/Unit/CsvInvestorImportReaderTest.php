@@ -57,7 +57,17 @@ it('rejects invalid numeric values', function () {
     );
 
     expect(fn () => iterator_to_array((new CsvInvestorImportReader(new InvestorImportValidator))->records($file)))
-        ->toThrow(InvestorImportValidationException::class, 'Row 2:');
+        ->toThrow(InvestorImportValidationException::class, 'Row 2: investment_amount has an invalid value.');
+});
+
+it('reports missing required values with readable messages', function () {
+    $file = csvUpload(
+        "investor_id,name,age,investment_amount,investment_date\n".
+        "1001,,28,100.00,13-11-2024\n",
+    );
+
+    expect(fn () => iterator_to_array((new CsvInvestorImportReader(new InvestorImportValidator))->records($file)))
+        ->toThrow(InvestorImportValidationException::class, 'Row 2: name is required.');
 });
 
 it('streams no records from a header-only CSV', function () {

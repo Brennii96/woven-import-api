@@ -14,10 +14,12 @@ final class InvestorImportValidator
     public function validate(CsvInvestorRecord $record): InvestorImportData
     {
         match (true) {
-            $record->investorId < 1 => throw new InvalidArgumentException('investor_id must be a positive integer.'),
-            $record->name === '' => throw new InvalidArgumentException('name is required.'),
+            $record->investorId === null || $record->investorId < 1 => throw new InvalidArgumentException('investor_id must be a positive integer.'),
+            $record->name === null || $record->name === '' => throw new InvalidArgumentException('name is required.'),
             mb_strlen($record->name) > 255 => throw new InvalidArgumentException('name must not exceed 255 characters.'),
-            $record->age < 0 || $record->age > 150 => throw new InvalidArgumentException('age must be between 0 and 150.'),
+            $record->age === null || $record->age < 0 || $record->age > 150 => throw new InvalidArgumentException('age must be between 0 and 150.'),
+            $record->investmentAmount === null => throw new InvalidArgumentException('investment_amount is required.'),
+            $record->investmentDate === null || $record->investmentDate === '' => throw new InvalidArgumentException('investment_date is required.'),
             default => null,
         };
 

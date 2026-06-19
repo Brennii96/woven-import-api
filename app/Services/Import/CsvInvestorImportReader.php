@@ -48,9 +48,18 @@ final class CsvInvestorImportReader implements InvestorImportReader
         } catch (InvalidArgumentException|MappingFailed|TypeCastingFailed $exception) {
             throw InvestorImportValidationException::forRow(
                 $lineNumber,
-                $exception->getMessage(),
+                $this->formatRowError($exception),
             );
         }
+    }
+
+    private function formatRowError(InvalidArgumentException|MappingFailed|TypeCastingFailed $exception): string
+    {
+        if ($exception instanceof TypeCastingFailed && $exception->info !== null) {
+            return "{$exception->info->source} has an invalid value.";
+        }
+
+        return $exception->getMessage();
     }
 
     private function createReader(UploadedFile $file): Reader

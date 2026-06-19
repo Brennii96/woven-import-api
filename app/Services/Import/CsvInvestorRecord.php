@@ -9,17 +9,17 @@ use League\Csv\Serializer\MapCell;
 final class CsvInvestorRecord
 {
     #[MapCell(column: 'investor_id', trimFieldValueBeforeCasting: true)]
-    public int $investorId;
+    public ?int $investorId = null;
 
     #[MapCell(column: 'name', trimFieldValueBeforeCasting: true)]
-    public string $name;
+    public ?string $name = null;
 
     #[MapCell(column: 'age', trimFieldValueBeforeCasting: true)]
-    public int $age;
+    public ?int $age = null;
 
     #[MapCell(column: 'investment_amount', trimFieldValueBeforeCasting: true)]
-    public float $investmentAmount;
+    public ?float $investmentAmount = null;
 
     #[MapCell(column: 'investment_date', trimFieldValueBeforeCasting: true)]
-    public string $investmentDate;
+    public ?string $investmentDate = null;
 }
