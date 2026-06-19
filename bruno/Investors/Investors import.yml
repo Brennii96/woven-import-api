@@ -1,0 +1,32 @@
+info:
+  name: Investors import
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{baseUrl}}/api/investors/import"
+  body:
+    type: multipart-form
+    data:
+      - name: file
+        type: file
+        value:
+          - /home/brendan/Projects/investors-api/sample-data/investors_with_dates.csv
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: tests
+      code: |-
+        test("imports investors", function () {
+          expect(res.status).to.equal(200);
+          expect(res.body.imported_rows).to.be.a("number");
+          expect(res.body.imported_rows).to.be.greaterThan(0);
+        });
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

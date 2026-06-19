@@ -1,0 +1,101 @@
+investor_id,name,age,investment_amount,investment_date
+500001,"Security Test Investor 1",25,1019.73,02-01-2025
+500002,"Security Test Investor 2",32,1039.46,03-01-2025
+500003,"<script>alert(""hello"");</script>",39,1059.19,04-01-2025
+500004,"Security Test Investor 4",46,1078.92,05-01-2025
+500005,";-- truncate",53,1098.65,06-01-2025
+500006,"Security Test Investor 6",60,1118.38,07-01-2025
+500007,"Robert'); DROP TABLE investors;--",67,1138.11,08-01-2025
+500008,"Security Test Investor 8",74,1157.84,09-01-2025
+500009,"<img src=x onerror=alert(1)>",81,1177.57,10-01-2025
+500010,"Security Test Investor 10",88,1197.30,11-01-2025
+500011,"=HYPERLINK(""https://example.invalid"",""click"")",22,1217.03,12-01-2025
+500012,"Security Test Investor 12",29,1236.76,13-01-2025
+500013,"+SUM(1,1)",36,1256.49,14-01-2025
+500014,"Security Test Investor 14",43,1276.22,15-01-2025
+500015,@cmd,50,1295.95,16-01-2025
+500016,"Security Test Investor 16",57,1315.68,17-01-2025
+500017,../etc/passwd,64,1335.41,18-01-2025
+500018,"Security Test Investor 18",71,1355.14,19-01-2025
+500019,{{7*7}},78,1374.87,20-01-2025
+500020,"Security Test Investor 20",85,1394.60,21-01-2025
+500021,\0null-byte-marker,19,1414.33,22-01-2025
+500022,"Security Test Investor 22",26,1434.06,23-01-2025
+500023,"Security Test Investor 23",33,1453.79,24-01-2025
+500024,"Security Test Investor 24",40,1473.52,25-01-2025
+0,"Security Test Investor 25",47,1493.25,26-01-2025
+500026,"Security Test Investor 26",54,1512.98,27-01-2025
+500027,"Security Test Investor 27",61,1532.71,28-01-2025
+500028,"Security Test Investor 28",68,1552.44,29-01-2025
+500029,"Security Test Investor 29",75,1572.17,30-01-2025
+500030,"Security Test Investor 30",121,1591.90,31-01-2025
+500031,"Security Test Investor 31",89,1611.63,01-02-2025
+500032,"Security Test Investor 32",23,1631.36,02-02-2025
+500033,"Security Test Investor 33",30,1651.09,03-02-2025
+500034,"Security Test Investor 34",37,1670.82,04-02-2025
+500035,"Security Test Investor 35",-1,1690.55,05-02-2025
+500036,"Security Test Investor 36",51,1710.28,06-02-2025
+500037,"Security Test Investor 37",58,1730.01,07-02-2025
+500038,"Security Test Investor 38",65,1749.74,08-02-2025
+500039,"Security Test Investor 39",72,1769.47,09-02-2025
+500040,"Security Test Investor 40",79,1789.20,31-02-2025
+500041,"Security Test Investor 41",86,1808.93,11-02-2025
+500042,"Security Test Investor 42",20,1828.66,12-02-2025
+500043,"Security Test Investor 43",27,1848.39,13-02-2025
+500044,"Security Test Investor 44",34,1868.12,14-02-2025
+500045,"Security Test Investor 45",41,1887.85,2025-02-15
+500046,"Security Test Investor 46",48,1907.58,16-02-2025
+500047,"Security Test Investor 47",55,1927.31,17-02-2025
+500048,"Security Test Investor 48",62,1947.04,18-02-2025
+500049,"Security Test Investor 49",69,1966.77,19-02-2025
+500050,"Security Test Investor 50",76,not-a-number,20-02-2025
+500051,"Security Test Investor 51",83,2006.23,21-02-2025
+500052,"Security Test Investor 52",90,2025.96,22-02-2025
+500053,"Security Test Investor 53",24,2045.69,23-02-2025
+500054,"Security Test Investor 54",31,2065.42,24-02-2025
+500055,,38,2085.15,25-02-2025
+500056,"Security Test Investor 56",45,2104.88,26-02-2025
+500057,"Security Test Investor 57",52,2124.61,27-02-2025
+500058,"Security Test Investor 58",59,2144.34,28-02-2025
+500059,"Security Test Investor 59",66,2164.07,01-03-2025
+500060,AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,73,2183.80,02-03-2025
+500061,"Security Test Investor 61",80,2203.53,03-03-2025
+500062,"Security Test Investor 62",87,2223.26,04-03-2025
+500063,"Security Test Investor 63",21,2242.99,05-03-2025
+500064,"Security Test Investor 64",28,2262.72,06-03-2025
+abc,"Security Test Investor 65",35,2282.45,07-03-2025
+500066,"Security Test Investor 66",42,2302.18,08-03-2025
+500067,"Security Test Investor 67",49,2321.91,09-03-2025
+500068,"Security Test Investor 68",56,2341.64,10-03-2025
+500069,"Security Test Investor 69",63,2361.37,11-03-2025
+500070,"Security Test Investor 70",old,2381.10,12-03-2025
+500071,"Security Test Investor 71",77,2400.83,13-03-2025
+500072,"Security Test Investor 72",84,2420.56,14-03-2025
+500073,"Security Test Investor 73",18,2440.29,15-03-2025
+500074,"Security Test Investor 74",25,2460.02,16-03-2025
+500075,"Security Test Investor 75",32,1e9999,17-03-2025
+500076,"Security Test Investor 76",39,2499.48,18-03-2025
+500077,"Security Test Investor 77",46,2519.21,19-03-2025
+500078,"Security Test Investor 78",53,2538.94,20-03-2025
+500079,"Security Test Investor 79",60,2558.67,21-03-2025
+500080,"Security Test Investor 80",67,2578.40,
+500081,"Security Test Investor 81",74,2598.13,23-03-2025
+500082,"Security Test Investor 82",81,2617.86,24-03-2025
+500083,"Security Test Investor 83",88,2637.59,25-03-2025
+500084,"Security Test Investor 84",22,2657.32,26-03-2025
+500085,"   ",29,2677.05,27-03-2025
+500086,"Security Test Investor 86",36,2696.78,28-03-2025
+500087,"Security Test Investor 87",43,2716.51,29-03-2025
+500088,"Security Test Investor 88",50,2736.24,30-03-2025
+500089,"Security Test Investor 89",57,2755.97,31-03-2025
+-10,"Security Test Investor 90",64,2775.70,01-04-2025
+500091,"Security Test Investor 91",71,2795.43,02-04-2025
+500092,"Security Test Investor 92",78,2815.16,03-04-2025
+500093,"Security Test Investor 93",85,2834.89,04-04-2025
+500094,"Security Test Investor 94",19,2854.62,05-04-2025
+500095,"Security Test Investor 95",26,2874.35,06-04-2025
+500096,"Security Test Investor 96",33,2894.08,07-04-2025
+500097,"Security Test Investor 97",40,2913.81,08-04-2025
+500098,"Security Test Investor 98",47,2933.54,09-04-2025
+500099,"Security Test Investor 99",54,2953.27,10-04-2025
+500100,"Security Test Investor 100",61,2973.00,11-04-2025

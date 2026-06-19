@@ -2,6 +2,9 @@
 
 Laravel REST API for importing investor data and reporting investor statistics.
 
+The bruno/ directory contains a ready to use API collection, sample-data includes variations of CSV to be imported 
+including the provided sample CSV, a 10k import, a 100k import, and a malicious import.
+
 ## API
 
 | Method | Endpoint                                     | Description                                  |
@@ -20,7 +23,7 @@ Upload a CSV using the `file` multipart field:
 ```bash
 curl -X POST http://localhost:8000/api/investors/import \
   -H 'Accept: application/json' \
-  -F 'file=@investors_with_dates.csv'
+  -F 'file=@sample-data/investors_with_dates.csv'
 ```
 
 Required header for csv:
@@ -72,7 +75,7 @@ incrementing id and keep this as a unique "external" key.
 
 ## Future improvements
 
-- Queue large imports and expose progress.
+- Queue large imports and expose progress using a status endpoint
 - Improved validation, currently throws on failure but for 10k rows and 7k being invalid that's 7k fixes then attempts
   to re-import.
 - Filtering and pagination on the investors endpoint. Ran import for 100k rows and the full fetch took ~5s to stream
